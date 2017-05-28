@@ -20,7 +20,7 @@
 ```jsx
 
 // install: npm install afeiship/react-layout-fixed --save
-// import : import ReactLayoutFixed from 'react-layout-fixed'
+// import : import {ReactLayoutFixed, ReactLayoutFixedItem} from 'react-layout-fixed'
 
 class App extends React.Component{
   render(){
