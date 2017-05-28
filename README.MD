@@ -31,14 +31,14 @@ class App extends React.Component{
           Top bar
           </ReactLayoutFixedItem>
 
-          <div className="body">
-          <p>test...</p>
-          <p>test...</p>
-          <p>test...</p>
-          <p>test...</p>
-          <p>test...</p>
-          <p>test...</p>
-          </div>
+          <section className="body">
+            <p>test...</p>
+            <p>test...</p>
+            <p>test...</p>
+            <p>test...</p>
+            <p>test...</p>
+            <p>test...</p>
+          </section>
 
           <ReactLayoutFixedItem className="bottom" position="bottom">
           Bottom bar
