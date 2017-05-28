@@ -1,0 +1,15 @@
+$position-list:('top','bottom');
+
+.react-layout-fixed{
+  position: relative;
+
+  &-item{
+    position: fixed;
+    width:100%;
+    @each $value in $position-list{
+      &[data-position=#{$value}]{
+        #{$value}:0;
+      }
+    }
+  }
+}
