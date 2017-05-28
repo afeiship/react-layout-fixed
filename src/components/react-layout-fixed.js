@@ -7,6 +7,10 @@ import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 
+const ZERO = '0';
+const STAR = '*';
+const BLANK= ' ';
+
 export default class extends PureComponent{
   /*===properties start===*/
   static propTypes = {
@@ -21,12 +25,12 @@ export default class extends PureComponent{
 
   get children(){
     let {layout,children} = this.props;
-    layout.length === 3 ? layout : layout.push('0');
+    layout.length === 3 ? layout : layout.push(ZERO);
 
     return Children.map(children,(child,index)=>{
       const height = layout[index];
-      const padding =  layout.join(' ').replace('*','0');
-      const style = height ==='*' ? {padding}: {height};
+      const padding = layout.join(BLANK).replace(STAR,ZERO);
+      const style = height ===STAR ? {padding}: {height};
       return cloneElement(child,{
         style,
         ...child.props
